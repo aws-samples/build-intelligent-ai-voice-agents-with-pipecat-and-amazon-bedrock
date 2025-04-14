@@ -1,0 +1,6 @@
+python-dotenv
+fastapi[all]
+uvicorn
+websockets==13.0
+git+https://github.com/adithyaxx/pipecat.git@add-bedrock-support#egg=pipecat-ai[daily,aws,silero]
+git+https://github.com/adithyaxx/pipecat-flows.git@add-bedrock-support#egg=pipecat-ai-flows[aws]
