@@ -1,8 +1,8 @@
 # Building Intelligent Voice AI Agents with Pipecat and Amazon Bedrock
 
-This repo shows you how to build real-time, voice-enabled AI agents using a fork of the open-source [Pipecat](https://github.com/adithyaxx/pipecat/tree/add-bedrock-support) framework (and [Pipecat Flows](https://github.com/adithyaxx/pipecat-flows/tree/add-bedrock-support)) and Amazon Bedrock foundation models. These forks contain support for Amazon Bedrock models with open PRs to the source repos.
+This repo shows you how to build real-time, voice-enabled AI agents using a fork of the open-source [Pipecat](https://github.com/adithyaxx/pipecat/tree/add-bedrock-support) framework (and [Pipecat Flows](https://github.com/adithyaxx/pipecat-flows/tree/add-bedrock-support)) and Amazon Bedrock foundation models. These forks contain support for Amazon Bedrock with pending PRs to the official Pipecat repositories.
 
-_The solution is not production ready and is an illustrative example only._
+> ⚠️ The solution is not production ready and is an illustrative example only. The solution relies on an API from AWS Partner, [Daily](https://www.daily.co/). Daily can be purchased on [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=d52484b0-a717-4b6d-a7aa-82f1c0c40b35). In practice, please use a [secrets management service](https://docs.aws.amazon.com/prescriptive-guidance/latest/aws-startup-security-baseline/wkld-03.html) to manage API keys and credentials_
 
 ## Overview
 
@@ -12,7 +12,7 @@ The following diagram illustrates the high-level architecture of this solution:
 
 Key components include:
 - Daily WebRTC streaming, VAD, noise suppression
-- Amazon Transcribe (STT) + Bedrock + Amazon Polly (TTS)
+- Amazon Transcribe (STT) + AmazBedrock + Amazon Polly (TTS)
 - Pipecat Flows for dialog management and task execution
 
 Built by AWS Generative AI Innovation Center. Ideal for anyone looking to quickly prototype voice AI agents for various use cases.
@@ -76,6 +76,7 @@ pipecat-voice-agent/
 ## Contributors
 
 - [Adithya Suresh](https://www.linkedin.com/in/adithyaxx/) - Deep Learning Architect, AWS Generative AI Innovation Center
+
 - [Daniel Wirjo](https://www.linkedin.com/in/wirjo/) - Senior Solutions Architect, AWS Generative AI Startups
 
 ## Security
