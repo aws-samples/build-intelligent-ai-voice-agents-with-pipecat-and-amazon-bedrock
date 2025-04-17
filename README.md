@@ -1,6 +1,6 @@
 # Building Intelligent AI Voice Agents with Pipecat and Amazon Bedrock
 
-This repo shows you how to build real-time, voice-enabled AI agents using a fork of the open-source [Pipecat](https://github.com/adithyaxx/pipecat/tree/add-bedrock-support) framework (and [Pipecat Flows](https://github.com/adithyaxx/pipecat-flows/tree/add-bedrock-support)) and Amazon Bedrock foundation models. These forks contain support for Amazon Bedrock with pending PRs to the official Pipecat repositories.
+This repo shows you how to build real-time, voice-enabled AI agents using a fork of the open-source [Pipecat](https://github.com/adithyaxx/pipecat/tree/add-bedrock-support) framework (and [Pipecat Flows](https://github.com/adithyaxx/pipecat-flows/tree/add-bedrock-support)) and [Amazon Bedrock](https://aws.amazon.com/bedrock/) foundation models. These forks contain support for Amazon Bedrock with pending PRs to the official Pipecat repositories.
 
 _⚠️ The solution is not production ready and is an illustrative example only. The solution relies on an API from AWS Partner, [Daily](https://www.daily.co/). Daily can be purchased on [AWS Marketplace](https://aws.amazon.com/marketplace/seller-profile?id=d52484b0-a717-4b6d-a7aa-82f1c0c40b35). In practice, please use a [secrets management service](https://docs.aws.amazon.com/prescriptive-guidance/latest/aws-startup-security-baseline/wkld-03.html) to manage API keys and credentials_
 
@@ -11,11 +11,11 @@ The following diagram illustrates the high-level architecture of this solution:
 ![](assets/diagram.png)
 
 Key components include:
-- Daily WebRTC streaming, VAD, noise suppression
-- Amazon Transcribe (STT) + AmazBedrock + Amazon Polly (TTS)
-- Pipecat Flows for dialog management and task execution
+- Daily WebRTC streaming, Voice Activity Detection (VAD), noise suppression
+- Amazon Transcribe (Speech-to-Text) + Amazon Bedrock (LLM) + Amazon Polly (Text-to-Speech)
+- [Pipecat Flows](https://github.com/pipecat-ai/pipecat-flows) for dialog management and task execution
 
-Built by AWS Generative AI Innovation Center. Ideal for anyone looking to quickly prototype voice AI agents for various use cases.
+Built by [AWS Generative AI Innovation Center](https://aws.amazon.com/ai/generative-ai/innovation-center/). Ideal for anyone looking to quickly prototype voice AI agents for various use cases.
 
 ## Quick Start
 
@@ -59,7 +59,7 @@ Built by AWS Generative AI Innovation Center. Ideal for anyone looking to quickl
 
 - Python 3.10+
 - Daily API key
-- AWS Access keys
+- AWS access keys
 - Modern web browser with WebRTC support
 
 ## Project Structure
