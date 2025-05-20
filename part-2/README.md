@@ -56,7 +56,7 @@ Built by [AWS Generative AI Innovation Center](https://aws.amazon.com/ai/generat
 
 ## Requirements
 
-- Python 3.10+
+- Python 3.12+
 - Daily API key
 - AWS access keys
 - Modern web browser with WebRTC support
