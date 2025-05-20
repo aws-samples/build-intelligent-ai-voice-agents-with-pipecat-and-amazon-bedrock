@@ -1,0 +1,6 @@
+python-dotenv
+fastapi[all]
+uvicorn
+websockets==13.1
+pipecat-ai[daily,aws,silero]==0.0.67
+pipecat-ai-flows[aws]==0.0.17
