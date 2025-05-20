@@ -1,4 +1,4 @@
-# Building Intelligent AI Voice Agents with Pipecat and Amazon Bedrock
+# Build Intelligent AI Voice Agents with Pipecat and Amazon Bedrock
 
 This repo shows you how to build real-time, voice-enabled AI agents using a fork of the open-source [Pipecat](https://github.com/adithyaxx/pipecat/tree/add-bedrock-support) framework (and [Pipecat Flows](https://github.com/adithyaxx/pipecat-flows/tree/add-bedrock-support)) and [Amazon Bedrock](https://aws.amazon.com/bedrock/) foundation models. These forks contain support for Amazon Bedrock with pending PRs to the official Pipecat repositories.
 
