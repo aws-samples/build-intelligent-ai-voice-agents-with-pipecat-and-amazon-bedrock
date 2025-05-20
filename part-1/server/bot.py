@@ -8,9 +8,10 @@ from pipecat.audio.vad.silero import SileroVADAnalyzer, VADParams
 from pipecat.pipeline.pipeline import Pipeline
 from pipecat.pipeline.runner import PipelineRunner
 from pipecat.pipeline.task import PipelineParams, PipelineTask
-from pipecat.services.aws.stt import TranscribeSTTService
-from pipecat.services.aws.tts import PollyTTSService
-from pipecat.services.aws.llm import BedrockLLMService, BedrockLLMContext
+from pipecat.processors.aggregators.openai_llm_context import OpenAILLMContext
+from pipecat.services.aws.stt import AWSTranscribeSTTService
+from pipecat.services.aws.tts import AWSPollyTTSService
+from pipecat.services.aws.llm import AWSBedrockLLMService, AWSBedrockLLMContext
 from pipecat.transports.services.daily import DailyParams, DailyTransport
 
 from pipecat_flows import FlowManager
@@ -50,7 +51,7 @@ async def main(room_url, token):
         )
 
         # Initialize speech-to-text service
-        stt = TranscribeSTTService(
+        stt = AWSTranscribeSTTService(
             api_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
             aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
             aws_session_token=os.getenv("AWS_SESSION_TOKEN"),
@@ -58,13 +59,13 @@ async def main(room_url, token):
         )
 
         # Initialize text-to-speech service
-        tts = PollyTTSService(
+        tts = AWSPollyTTSService(
             api_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
             aws_access_key_id=os.getenv("AWS_ACCESS_KEY_ID"),
             aws_session_token=os.getenv("AWS_SESSION_TOKEN"),
             region=os.getenv("AWS_REGION"),
             voice_id="Joanna",
-            params=PollyTTSService.InputParams(
+            params=AWSPollyTTSService.InputParams(
                 engine="generative",
                 language="en-AU",
                 rate="1.1"
@@ -72,20 +73,20 @@ async def main(room_url, token):
         )
 
         # Initialize LLM service
-        llm = BedrockLLMService(
+        llm = AWSBedrockLLMService(
             aws_access_key=os.getenv("AWS_ACCESS_KEY_ID"),
             aws_secret_key=os.getenv("AWS_SECRET_ACCESS_KEY"),
             aws_session_token=os.getenv("AWS_SESSION_TOKEN"),
             aws_region=os.getenv("AWS_REGION"),
             model="us.anthropic.claude-3-5-haiku-20241022-v1:0",
-            params=BedrockLLMService.InputParams(
+            params=AWSBedrockLLMService.InputParams(
                 temperature=0.3,
                 latency="optimized",
                 additional_model_request_fields={}
             )
         )
 
-        context = BedrockLLMContext()
+        context = OpenAILLMContext()
         context_aggregator = llm.create_context_aggregator(context)
 
         pipeline = Pipeline(

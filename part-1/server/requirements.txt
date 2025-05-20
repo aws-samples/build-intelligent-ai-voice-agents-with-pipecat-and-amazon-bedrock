@@ -1,6 +1,6 @@
 python-dotenv
 fastapi[all]
 uvicorn
-websockets==13.0
-git+https://github.com/adithyaxx/pipecat.git@add-bedrock-support#egg=pipecat-ai[daily,aws,silero]
-git+https://github.com/adithyaxx/pipecat-flows.git@add-bedrock-support#egg=pipecat-ai-flows[aws]
+websockets==13.1
+pipecat-ai[daily,aws,silero]==0.0.67
+pipecat-ai-flows[aws]==0.0.17

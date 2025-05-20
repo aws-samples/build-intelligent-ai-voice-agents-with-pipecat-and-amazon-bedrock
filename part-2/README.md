@@ -6,6 +6,10 @@ _⚠️ The solution is not production ready and is an illustrative example only
 
 ## Overview
 
+The following diagram illustrates the high-level architecture of this solution:
+
+![](assets/diagram.jpg)
+
 Key components include:
 - Daily WebRTC streaming with Voice Activity Detection (VAD)
 - [Amazon Nova Sonic](https://aws.amazon.com/ai/generative-ai/nova/speech/) (Speech-to-Speech) model on Amazon Bedrock

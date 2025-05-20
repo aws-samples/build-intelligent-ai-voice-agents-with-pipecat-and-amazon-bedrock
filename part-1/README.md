@@ -8,7 +8,7 @@ _⚠️ The solution is not production ready and is an illustrative example only
 
 The following diagram illustrates the high-level architecture of this solution:
 
-![](assets/diagram.png)
+![](assets/diagram.jpg)
 
 Key components include:
 - Daily WebRTC streaming, Voice Activity Detection (VAD), noise suppression
