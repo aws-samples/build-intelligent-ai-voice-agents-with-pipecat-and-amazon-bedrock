@@ -1,12 +1,14 @@
-# Build Intelligent Voice AI Agents with Amazon Bedrock
+# Building intelligent voice AI agents with Pipecat and Amazon Bedrock
 
-This repository contains examples of building real-time, voice-enabled AI agents using [Pipecat](https://github.com/pipecat-ai/pipecat), [Amazon Bedrock](https://aws.amazon.com/bedrock/) foundation models and other technology stacks.
+![](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2025/05/10/Cover-Voice-AI-agents-1024x576.png)
+
+This repository contains examples of building real-time, voice-enabled AI agents using [Pipecat](https://github.com/pipecat-ai/pipecat) open-source fraework, and [Amazon Bedrock](https://aws.amazon.com/bedrock/). 
+
+In addition to the code samples below, we also have an accompanying [workshop](https://catalog.workshops.aws/voice-ai-agents/).
 
 ## Repository Structure
 
-The repository is organized into three main sections:
-
-### Core Implementations with Pipecat
+The repository is organized into these sections:
 
 #### [Part 1: Cascaded Implementation with Amazon Transcribe, Amazon Bedrock and Amazon Polly](part-1/README.md)
 
@@ -18,9 +20,9 @@ The repository is organized into three main sections:
 - Implements a pipeline with Daily WebRTC and Amazon Nova Sonic (Speech-to-Speech) model on Amazon Bedrock
 - Incorporates function calling capabilities for retrieving information
 
-### [Additional Demonstrations](demos/README.md)
+### Demos
 
-The `demos/` directory contains additional examples showcasing different architectural approaches and use cases for GenAI voice applications:
+The `demos/` directory contains additional examples showcasing different architectural approaches and use cases for GenAI voice applications. [Learn more](demos/README.md)
 
 #### [Health Guide Assistant](demos/health-guide-assistant/README.md)
 
